@@ -1,0 +1,63 @@
+/* Container */
+.contact-section {
+  min-height: 100vh;
+  background-color: #f9fafb; /* light gray */
+  padding: 5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Form wrapper */
+.contact-form {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Inputs and textarea */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #d1d5db; /* gray-300 */
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #3b82f6; /* blue-500 */
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+/* Button */
+.contact-form button {
+  width: 100%;
+  background-color: #3b82f6; /* blue-500 */
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #2563eb; /* blue-600 */
+}
+
+/* Status message */
+.contact-form .status {
+  margin-bottom: 1rem;
+  color: #ef4444; /* red-500 */
+  font-weight: 500;
+  text-align: center;
+}

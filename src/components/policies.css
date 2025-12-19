@@ -1,0 +1,49 @@
+/* styles/policies.css */
+
+/* General section styling */
+.policy-section {
+  background-color: #f9fafb; /* light gray */
+  min-height: 100vh;
+  padding: 5rem 1rem; /* py-20 px-4 equivalent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Arial", sans-serif;
+}
+
+/* Container */
+.policy-container {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Headings */
+.policy-container h1 {
+  font-size: 2.5rem; /* text-4xl */
+  font-weight: 700;
+  color: #111827; /* gray-900 */
+  margin-bottom: 1.5rem;
+}
+
+/* Paragraphs */
+.policy-container p {
+  font-size: 1.125rem; /* text-lg */
+  color: #374151; /* gray-700 */
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+/* Last paragraph spacing fix */
+.policy-container p:last-child {
+  margin-bottom: 0;
+}
+
+/* Optional: Add subtle hover effect to links if needed */
+.policy-container a {
+  color: #2563eb; /* blue-600 */
+  text-decoration: underline;
+}
+.policy-container a:hover {
+  color: #1e40af; /* blue-800 */
+}
