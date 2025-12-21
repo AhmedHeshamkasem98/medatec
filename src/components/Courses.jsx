@@ -15,7 +15,7 @@ const Courses = () => {
         "Real Projects",
       ],
       originalPrice: 7500,
-      price: 3000,
+      price: 4000,
       formLink: "https://forms.gle/XvUwibiyPMxQvsmS8",
     },
     {
@@ -30,8 +30,8 @@ const Courses = () => {
         "Working with Files",
         "Real Projects",
       ],
-      originalPrice: 5000,
-      price: 2500,
+      originalPrice: 6000,
+      price: 3000,
       formLink: "https://forms.gle/vEr2eLY6tyMbShgM8",
     },
   ];
