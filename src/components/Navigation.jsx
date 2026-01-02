@@ -27,7 +27,7 @@ export default function Navigation({ activeSection, onSectionChange }) {
           <img
             src={logo}
             alt="MedaTech"
-            className="h-22 w-auto transition-transform hover:scale-110"
+            className="h-20 w-auto transition-transform hover:scale-110"
           />
 
           {/* Desktop Menu */}
