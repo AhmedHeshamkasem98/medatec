@@ -1,6 +1,6 @@
 // src/components/Hero.jsx
 import React from "react";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Code2 } from "lucide-react";
 
 const Hero = ({ onViewCourses }) => {
   return (
@@ -19,65 +19,49 @@ const Hero = ({ onViewCourses }) => {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/90"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/90"></div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 mb-6 px-5 py-2 bg-blue-900/40 border border-blue-500/30 rounded-full">
-          <Sparkles className="w-4 h-4 text-blue-400" />
-          <span className="text-blue-400 font-semibold text-sm">
+        <div className="inline-flex items-center gap-2 mb-6 px-6 py-2 bg-blue-900/40 border border-blue-500/30 rounded-full">
+          <Code2 className="w-4 h-4 text-blue-400" />
+          <span className="text-blue-400 font-semibold text-sm tracking-wide">
             Learn Programming • Build Skills
           </span>
         </div>
 
         {/* Heading */}
-        <h1 className="text-4xl md:text-7xl font-bold text-white mb-6 leading-tight">
-          Welcome to{" "}
-          <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-            Medatech
-          </span>
-          <br />
-          <span className="text-3xl md:text-5xl text-gray-200">
-            Learn Programming The Right Way
+        <h1 className="text-4xl md:text-7xl font-extrabold text-white leading-tight mb-6">
+          Learn Programming <br />
+          <span className="text-blue-400">
+            The Practical Way
           </span>
         </h1>
 
         {/* Description */}
-        <p className="text-lg md:text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-          منصة تعليمية متخصصة في البرمجة، بتعلمك المهارات
-          العملية المطلوبة في سوق العمل من Front-End
-          إلى Python بأسلوب واضح وتطبيقي.
+        <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed">
+          Medatech منصة تعليمية متخصصة في البرمجة،
+          بتعلمك المهارات اللي فعلاً محتاجها سوق العمل
+          من Front-End لحد Python.
         </p>
 
-        {/* Button */}
-        <button
-          onClick={onViewCourses}
-          className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-xl transition-all duration-200 transform hover:scale-105 shadow-lg"
-        >
-          View Courses
-          <ArrowRight className="w-5 h-5" />
-        </button>
+        {/* Buttons */}
+        <div className="flex flex-col md:flex-row gap-4 justify-center">
+          <button
+            onClick={onViewCourses}
+            className="inline-flex items-center justify-center gap-3 bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-10 rounded-xl transition-all transform hover:scale-105 shadow-lg"
+          >
+            View Courses
+            <ArrowRight className="w-5 h-5" />
+          </button>
 
-        {/* Stats */}
-        <div className="mt-20 grid md:grid-cols-3 gap-8">
-          {[
-            { value: "500+", label: "Active Students" },
-            { value: "Hands-On", label: "Practical Courses" },
-            { value: "95%", label: "Skill Progress" },
-          ].map((stat, index) => (
-            <div
-              key={index}
-              className="p-8 bg-white/5 backdrop-blur rounded-2xl border border-white/10 hover:border-blue-500/40 transition"
-            >
-              <div className="text-4xl font-bold text-blue-400 mb-2">
-                {stat.value}
-              </div>
-              <p className="text-gray-300 font-medium">
-                {stat.label}
-              </p>
-            </div>
-          ))}
+          <a
+            href="#about"
+            className="inline-flex items-center justify-center gap-3 border border-blue-500 text-blue-400 hover:bg-blue-500/10 font-semibold py-4 px-10 rounded-xl transition-all"
+          >
+            Why Medatech?
+          </a>
         </div>
       </div>
     </section>
