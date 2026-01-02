@@ -12,8 +12,8 @@ const Hero = ({ onViewCourses }) => {
         {/* Badge */}
         <div className="inline-flex items-center gap-2 mb-6 px-5 py-2 bg-blue-100 rounded-full">
           <Sparkles className="w-4 h-4 text-blue-600" />
-          <span className="text-blue-700 font-semibold">
-            Premium Online Learning Platform
+          <span className="text-blue-400 font-semibold text-sm tracking-wide">
+            Learn Programming • Build Skills
           </span>
         </div>
 
@@ -31,8 +31,8 @@ const Hero = ({ onViewCourses }) => {
 
         {/* Description */}
         <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-          اكتشف دوراتنا العالمية المصممة لمساعدتك على إتقان المهارات الحديثة
-          من تطوير واجهات المستخدم إلى برمجة بايثون.
+          منصة Medatech بتقدملك مهارات عملية في البرمجة والتقنية
+            بأسلوب واقعي، مباشر، وبدون حشو.
         </p>
 
         {/* Buttons */}
