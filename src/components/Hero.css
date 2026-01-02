@@ -1,51 +1,84 @@
 .hero {
-  background: linear-gradient(135deg, #0057ff 0%, #0044cc 100%);
+  position: relative;
   color: #ffffff;
   padding: 6rem 1.5rem;
   text-align: center;
-  min-height: 500px;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
+/* Background Video */
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Dark Overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 20, 60, 0.85),
+    rgba(0, 0, 0, 0.85)
+  );
+  z-index: 2;
+}
+
+/* Content */
 .hero-content {
+  position: relative;
+  z-index: 3;
   max-width: 800px;
   margin: 0 auto;
-  animation: fadeInUp 0.8s ease-out;
+  animation: fadeInUp 0.9s ease-out;
 }
 
 .hero-title {
-  font-size: 3rem;
+  font-size: 3.2rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
   line-height: 1.2;
+}
+
+.hero-title span {
+  color: #4da3ff;
 }
 
 .hero-subtitle {
   font-size: 1.25rem;
   margin-bottom: 2.5rem;
   opacity: 0.95;
-  line-height: 1.5;
+  line-height: 1.6;
+  color: #dbeafe;
 }
 
+/* CTA Button */
 .hero-cta {
-  background-color: #ffffff;
-  color: #0057ff;
+  background-color: #4da3ff;
+  color: #0a0a0a;
   border: none;
-  padding: 1rem 2.5rem;
+  padding: 1rem 2.8rem;
   font-size: 1.125rem;
   font-weight: 600;
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 25px rgba(77, 163, 255, 0.35);
 }
 
 .hero-cta:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-  background-color: #f8f9fa;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(77, 163, 255, 0.5);
+  background-color: #60a5fa;
 }
 
 .hero-cta:active {
@@ -53,14 +86,15 @@
 }
 
 .hero-cta:focus {
-  outline: 3px solid rgba(255, 255, 255, 0.5);
-  outline-offset: 3px;
+  outline: 3px solid rgba(77, 163, 255, 0.6);
+  outline-offset: 4px;
 }
 
+/* Animation */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(35px);
   }
   to {
     opacity: 1;
@@ -68,22 +102,22 @@
   }
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   .hero {
     padding: 4rem 1.5rem;
-    min-height: 400px;
   }
 
   .hero-title {
-    font-size: 2rem;
+    font-size: 2.1rem;
   }
 
   .hero-subtitle {
-    font-size: 1.125rem;
+    font-size: 1.1rem;
   }
 
   .hero-cta {
-    padding: 0.875rem 2rem;
+    padding: 0.9rem 2.2rem;
     font-size: 1rem;
   }
 }
