@@ -1,93 +1,72 @@
 // src/components/Hero.jsx
 import React from "react";
-import { ArrowRight, Sparkles, Play } from "lucide-react";
+import { ArrowRight, Play } from "lucide-react";
 
 const Hero = ({ onViewCourses }) => {
   return (
     <section
       id="home"
-      className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 flex items-center justify-center pt-24"
+      className="min-h-screen bg-gradient-to-br from-[#061a12] via-[#0b2a1c] to-black flex items-center pt-28"
     >
-      <div className="container mx-auto px-4 text-center">
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 mb-6 px-5 py-2 bg-blue-100 rounded-full">
-          <Sparkles className="w-4 h-4 text-blue-600" />
-          <span className="text-blue-700 font-semibold">
-            Premium Online Learning Platform
-          </span>
+      <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-14 items-center">
+        
+        {/* LEFT CONTENT */}
+        <div className="text-left">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 mb-6 px-5 py-2 bg-green-900/40 border border-green-600/30 rounded-full">
+            <span className="text-green-400 font-semibold text-sm">
+              MONEY • SKILLS • GROWTH
+            </span>
+          </div>
+
+          {/* Heading */}
+          <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
+            Learn Skills That <br />
+            <span className="text-green-400">Actually Make Money</span>
+          </h1>
+
+          {/* Description */}
+          <p className="text-lg text-gray-300 max-w-xl mb-10 leading-relaxed">
+            منصة Medatech بتقدملك مهارات عملية في البرمجة والتقنية
+            بأسلوب واقعي، مباشر، وبدون حشو.
+          </p>
+
+          {/* Buttons */}
+          <div className="flex flex-wrap gap-4">
+            <button
+              onClick={onViewCourses}
+              className="flex items-center gap-3 bg-green-500 hover:bg-green-600 text-black font-bold py-4 px-8 rounded-xl transition-all transform hover:scale-105"
+            >
+              Start Learning
+              <ArrowRight className="w-5 h-5" />
+            </button>
+
+            <a
+              href="#intro-video"
+              className="flex items-center gap-3 border border-green-500 text-green-400 hover:bg-green-500/10 font-semibold py-4 px-8 rounded-xl transition-all"
+            >
+              Watch Intro
+              <Play className="w-5 h-5" />
+            </a>
+          </div>
         </div>
 
-        {/* Heading */}
-        <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-          Welcome to{" "}
-          <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
-            Medatech
-          </span>
-          <br />
-          <span className="text-4xl md:text-6xl">
-            Learn, Grow, Succeed
-          </span>
-        </h1>
-
-        {/* Description */}
-        <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-          اكتشف دوراتنا العالمية المصممة لمساعدتك على إتقان المهارات الحديثة
-          من تطوير واجهات المستخدم إلى برمجة بايثون.
-        </p>
-
-        {/* Buttons */}
-        <div className="flex flex-col md:flex-row gap-4 justify-center mb-14">
-          <button
-            onClick={onViewCourses}
-            className="inline-flex items-center justify-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-200 transform hover:scale-105 shadow-lg"
-          >
-            View Courses
-            <ArrowRight className="w-5 h-5" />
-          </button>
-
-          <a
-            href="#intro-video"
-            className="inline-flex items-center justify-center gap-3 border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-bold py-4 px-8 rounded-xl transition-all"
-          >
-            Watch Intro
-            <Play className="w-5 h-5" />
-          </a>
-        </div>
-
-        {/* Video Section */}
+        {/* RIGHT VIDEO */}
         <div
           id="intro-video"
-          className="max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl"
+          className="relative rounded-3xl overflow-hidden shadow-2xl border border-green-500/20"
         >
           <iframe
-            className="w-full h-[240px] md:h-[500px]"
+            className="w-full h-[260px] md:h-[420px]"
             src="https://www.youtube.com/embed/VIDEO_ID"
             title="Medatech Introduction"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
-        </div>
 
-        {/* Stats */}
-        <div className="mt-20 grid md:grid-cols-3 gap-8">
-          {[
-            { value: "500+", label: "Active Students" },
-            { value: "2+", label: "Expert Courses" },
-            { value: "95%", label: "Success Rate" },
-          ].map((stat, index) => (
-            <div
-              key={index}
-              className="p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow"
-            >
-              <div className="text-4xl font-bold text-blue-600 mb-2">
-                {stat.value}
-              </div>
-              <p className="text-gray-600 font-medium">
-                {stat.label}
-              </p>
-            </div>
-          ))}
+          {/* Glow Effect */}
+          <div className="absolute inset-0 pointer-events-none ring-1 ring-green-500/30 rounded-3xl"></div>
         </div>
       </div>
     </section>
